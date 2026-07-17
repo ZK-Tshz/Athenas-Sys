@@ -5,6 +5,9 @@ Este documento define o fluxo de trabalho utilizado no desenvolvimento do Athena
 
 O objetivo é manter o projeto organizado, evitar conflitos entre os integrantes e garantir que a branch principal esteja sempre estável.
 
+#### Observação:
+O documento não contém instruções sobre ``merge``, pois a equipe é iniciante com Git e GitHub, por isso a melhor decisão foi a de os integrantes avisarem o responsável pelo backend para realizar os merges.
+
 ---
 ## Estrutura do Repositório
 O projeto está organizado da seguinte forma:
@@ -72,7 +75,7 @@ Um commit é uma maneira de registrar as alterações realizadas, um checkpoint,
 Faça os commits sempre que concluir uma parte lógica do desenvolvimento.
 Comumente, nós utilizamos o padrão **Conventional Commits**:
 ### Principais Tipos de commits:
-### 1. feat:
+#### 1. feat:
 Convencionalmente usado para identificar uma nova feature (funcionalidade) ao projeto. Exemplos:
 - ``git commit -m "feat: implementa cadastro de mesas"``
 - ``git commit -m "feat: adiciona autenticação JWT"``
