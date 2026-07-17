@@ -99,7 +99,7 @@ Convencionalmente usado para identificar alterações de configuração. Exemplo
 
 ---
 ## Fluxo de Trabalho
-Se ainda não tiver clonado o repositório:
+Se ainda não tiver clonado o repositório (Realize uma única vez):
 1. Abra o terminal CMD do Windows na pasta que deseja armazenar o projeto. Exemplo de pasta:
     - ``C:\Users\usuario\Desktop\Projetos``
 2. Digite:
@@ -116,8 +116,11 @@ Sempre antes de começar a mexer no projeto, antes de qualquer outra coisa, assi
 
 ### 2. Criar uma nova branch de feature
 Depois de sincronizar os repositórios, poderá começar a desenvolver, tendo cada funcionalidade em uma branch específica.
+- Verifique em qual branch você está:
+  - ```git branch```
+
 - Crie a branch de feature:
-    - ``git checkout -b feature/"nome-da-funcionalidade"``
+  - ``git checkout -b feature/"nome-da-funcionalidade"``
 
 Sempre nomeie a branch de acordo com a funcionalidade que está desenvolvendo, por exemplo:
 - ``feature/restaurante``
@@ -133,9 +136,25 @@ Lembre-se que, sempre para criar uma nova branch, deve se estar na branch **deve
 - Caso queira somente mudar de branch:
   - ``git checkout nome-da-branch``
 
+### 2.1 Programar na branch já criada
+Caso tenha desenvolvido uma funcionalidade e não tenha terminado, quando for continuar, para evitar problemas, siga os seguintes passos:
+- Verifique a branch em que está:
+  - ``git branch``
+- Troque para a branch develop:
+  - ``git checkout develop``
+- Sincronize seu projeto local com o repositório do GitHub:
+  - ``git pull origin develop``
+- Troque para a branch que estava antes:
+  - ``git checkout feature/"nome-da-funcionalidade"``
+- Sincronize a branch atual com o GitHub
+  - ``git pull origin feature/"nome-da-funcionalidade"``
+
 ### 3. Adicionar arquivos ao Git
 Sempre que concluir uma parte da feature, ou uma parte importante dessa funcionalidade, registre a alteração.
 Para isso, será necessário um commit, mas antes do commit, é necessário adicionar os arquivos modificados ao Git.
+- Veja quais arquivos foram modificados, adicionados ou removidos:
+  - ``git status``
+
 - Adicione os arquivos no Git:
     - ``git add .``
 
@@ -156,3 +175,100 @@ Depois de realizar o commit, é hora de subir isso para o repositório do GitHub
     - ``git push -u origin feature/restaurante``
 - Depois disso, será necessário rodar somente:
     - ``git push``
+
+---
+## Fluxograma
+
+Abrir terminal na IDE
+
+↓
+
+``git checkout develop``
+
+↓
+
+``git pull origin develop``
+
+↓
+
+``git checkout -b feature/"nome-da-funcionalidade"``
+
+↓
+
+Desenvolver
+
+↓
+
+``git status``
+
+↓
+
+``git add .``
+
+↓
+
+``git commit``
+
+↓
+
+``git push``
+
+↓
+
+Parou no meio do desenvolvimento? 
+
+* Se sim, faça:
+
+``git branch`` (Aqui mostrará o nome da branch, se não for develop, guarde o nome)
+
+↓
+
+``git checkout develop``
+
+↓
+
+``git pull origin develop``
+
+↓
+
+``git checkout "nome-da-branch"`` (coloque o nome que apareceu no primeiro comando, a menos que seja "develop")
+
+↓
+
+``git pull origin "nome-da-branch"``
+
+↓
+
+Desenvolver
+
+↓
+
+``git status``
+
+↓
+
+``git add .``
+
+↓
+
+``git commit``
+
+↓
+
+``git push``
+
+* Se não, siga o começo do fluxo.
+
+---
+## Comandos Úteis
+| Comando             | Função               |
+| ------------------- |----------------------|
+| `git status`        | Ver alterações       |
+| `git branch`        | Ver branches         |
+| `git checkout`      | Trocar de branch     |
+| `git checkout -b`   | Criar branch         |
+| `git add .`         | Adicionar alterações |
+| `git commit`        | Criar commit         |
+| `git push`          | Enviar commit        |
+| `git pull`          | Atualizar branch     |
+
