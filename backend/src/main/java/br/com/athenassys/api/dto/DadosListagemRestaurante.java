@@ -1,4 +1,13 @@
 package br.com.athenassys.api.dto;
 
-public record DadosListagemRestaurante() {
+import br.com.athenassys.api.model.Restaurante;
+
+public record DadosListagemRestaurante(
+        String nome,
+        String email,
+        String telefone,
+        String cnpj,
+        String senha
+) {
+
 }
