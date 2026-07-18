@@ -1,0 +1,60 @@
+<section class="caixa-login">
+  <!-- 
+  caixa-login: Diz para a página ocupar 100% da altura da tela do celular ou computador do usuário.
+  Também aplica a cor de fundo bege marfim claro (grego) e ativa o alinhamento flexível.
+  -->
+
+  <!-- Banner vermelho -->
+  <div class="banner-marca">
+    <!-- Espaço para a Logo -->
+    <div class="logo-container">
+      <span class="logo-texto">LOGO</span>
+      <!-- Substituir para: <img src="assets/imagens/logo.png" alt="Logo" class="logo-imagem"> -->
+    </div>
+    <h1 class="titulo-marca">ATHENAS</h1>
+    <p class="subtitulo-marca">Gestão Inteligente para Restaurantes</p>
+  </div>
+
+  <!-- Lado Direito: Área clara que centraliza o formulário -->
+  <div class="area-formulario">
+
+    <!-- Formulário (Card de Login com a cor marfim clarinha #fdfbf7 que você escolheu) -->
+    <div class="cartao-formulario">
+      
+      <!-- Título de instrução do formulário -->
+      <h2 class="titulo-formulario">ACESSO OPERACIONAL</h2>
+
+      <!-- Form real do Angular que envelopa os campos -->
+      <form class="formulario-operacional">
+        
+        <!-- Campo Usuário -->
+        <div class="grupo-campo">
+          <label class="rotulo-campo">USUÁRIO</label>
+          <input type="text" [(ngModel)]="usuario" name="usuario" placeholder="Digite seu usuário" required
+            class="campo-entrada">
+          <!-- 
+          [(ngModel)]="usuario": Esta é uma regra do Angular extremamente importante! Ela diz que tudo o que for digitado ali dentro deve ser enviado instantaneamente para a variável usuario no nosso arquivo de lógica (login.ts).
+
+          required: Garante que o usuário não consiga clicar em entrar se o campo estiver vazio.
+          -->
+        </div>
+
+        <!-- Campo Senha -->
+        <div class="grupo-campo">
+          <label class="rotulo-campo">SENHA</label>
+          <input type="password" [(ngModel)]="senha" name="senha" placeholder="Digite sua senha" required
+            class="campo-entrada">
+        </div>
+
+        <!-- Botão de entrada -->
+        <button type="submit" class="botao-entrar">
+          ENTRAR
+        </button>
+
+      </form>
+
+    </div> <!-- Fim do Formulário (Card de Login) -->
+
+  </div> <!-- Fim do Lado Direito -->
+
+</section> <!-- Fim da Section Mãe -->
