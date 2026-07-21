@@ -4,8 +4,27 @@
   Também aplica a cor de fundo bege marfim claro (grego) e ativa o alinhamento flexível.
   -->
 
+  <div class="ornamento-superior">
+    <img
+      src="assets/imagens/ornamento-h-g.jpeg"
+      alt="Ornamento Grego"
+      class="imagem-ornamento">
+  </div>
+
+  <!-- Templo -->
+  <div class="templo-esquerda">
+
+    <img
+      src="assets/imagens/templo-grego.jpeg"
+      alt="Templo Grego"
+      class="imagem-templo">
+
+  </div>
+
   <!-- Banner vermelho -->
-  <div class="banner-marca">
+  <div class="painel-vermelho">
+    <img src="assets/imagens/banner-bordo.jpeg" alt="Banner-athenas" class="banner-athena">
+
     <!-- Espaço para a Logo -->
     <div class="logo-container">
       <span class="logo-texto">LOGO</span>
@@ -20,9 +39,27 @@
 
     <!-- Formulário (Card de Login com a cor marfim clarinha #fdfbf7 que você escolheu) -->
     <div class="cartao-formulario">
-      
+
+      <!-- Ícone Superior -->
+      <div class="icone-login">
+
+        <img
+          src="assets/imagens/icone-templo.jpeg"
+          alt="Login">
+
+      </div>
+
       <!-- Título de instrução do formulário -->
-      <h2 class="titulo-formulario">ACESSO OPERACIONAL</h2>
+      <h2 class="titulo-formulario">Bem-vindo de volta!</h2>
+      <p class="descricao-formulario">Faça login para acessar o sistema.</p>
+
+      <div class="linha-separadora">
+
+        <img
+          src="assets/imagens/divisor-g.jpeg"
+          alt="Divisor">
+
+      </div>
 
       <!-- Form real do Angular que envelopa os campos -->
       <form class="formulario-operacional">
@@ -30,20 +67,64 @@
         <!-- Campo Usuário -->
         <div class="grupo-campo">
           <label class="rotulo-campo">USUÁRIO</label>
-          <input type="text" [(ngModel)]="usuario" name="usuario" placeholder="Digite seu usuário" required
-            class="campo-entrada">
-          <!-- 
-          [(ngModel)]="usuario": Esta é uma regra do Angular extremamente importante! Ela diz que tudo o que for digitado ali dentro deve ser enviado instantaneamente para a variável usuario no nosso arquivo de lógica (login.ts).
+          <div class="campo-com-icone">
 
-          required: Garante que o usuário não consiga clicar em entrar se o campo estiver vazio.
-          -->
+            <img
+              src="assets/imagens/icone-usuario.jpeg"
+              alt="Usuário"
+              class="icone-campo">
+
+            <input
+              type="text"
+              [(ngModel)]="usuario"
+              name="usuario"
+              placeholder="Digite seu usuário"
+              required
+              class="campo-entrada">
+
+                <!-- 
+                [(ngModel)]="usuario": Esta é uma regra do Angular extremamente importante! Ela diz que tudo o que for digitado ali dentro deve ser enviado instantaneamente para a variável usuario no nosso arquivo de lógica (login.ts).
+
+                required: Garante que o usuário não consiga clicar em entrar se o campo estiver vazio.
+                -->
+          </div>
+        
         </div>
 
         <!-- Campo Senha -->
         <div class="grupo-campo">
           <label class="rotulo-campo">SENHA</label>
-          <input type="password" [(ngModel)]="senha" name="senha" placeholder="Digite sua senha" required
-            class="campo-entrada">
+          <div class="campo-com-icone">
+
+            <img
+              src="assets/imagens/icone-cadeado.jpeg"
+              alt="Senha"
+              class="icone-campo">
+
+            <input
+              type="password"
+              [(ngModel)]="senha"
+              name="senha"
+              placeholder="Digite sua senha"
+              required
+              class="campo-entrada">
+
+          </div>
+        </div>
+
+        <!-- Opções -->
+        <div class="opcoes-login">
+
+          <label class="lembrar-login">
+
+            <input type="checkbox">
+            
+            Lembrar-me
+          
+          </label>
+
+          <a href="#" class="esqueceu-senha">Esqueceu sua senha ou usuário?</a>
+
         </div>
 
         <!-- Botão de entrada -->
@@ -51,10 +132,70 @@
           ENTRAR
         </button>
 
+        <p class="feedback-login" *ngIf="feedbackMensagem">
+          {{ feedbackMensagem }}
+        </p>
+
       </form>
 
-    </div> <!-- Fim do Formulário (Card de Login) -->
+       <!-- Linha -->
+      <div class="linha-separadora">
 
-  </div> <!-- Fim do Lado Direito -->
+        <img
+          src="assets/imagens/divisor-g.jpeg"
+          alt="Divisor">
 
-</section> <!-- Fim da Section Mãe -->
+      </div>
+
+
+          <!-- Cadastro -->
+
+      <div class="primeiro-acesso">
+
+        <p>
+
+          Primeiro acesso?
+
+        </p>
+
+        <button
+          type="button"
+          class="botao-cadastro">
+
+          <img
+            src="assets/imagens/icone-usuario-plus.jpeg"
+            alt="Cadastro"
+            class="icone-botao">
+
+          CADASTRE-SE
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Rodapé -->
+
+  <div class="rodape-decorativo">
+
+    <img
+      src="assets/imagens/ornamento-h-p.jpeg"
+      alt="Ornamento"
+      class="ornamento-esquerdo">
+
+    <img
+      src="assets/imagens/prato.jpeg"
+      alt="Prato"
+      class="prato-centro">
+
+    <img
+      src="assets/imagens/ornamento-h-p.jpeg"
+      alt="Ornamento"
+      class="ornamento-direito">
+
+  </div>
+
+</section>

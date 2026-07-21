@@ -1,176 +1,178 @@
-.caixa-login {
-min-height: 100vh;
-background-color: #fff8ee;
-font-family: 'Montserrat', sans-serif;
-display: flex;
-flex-direction: column;
-margin: 0;
-box-sizing: border-box;
+/* LOGIN.CSS - Athenas Sys */
+.caixa-login{
+min-height:100vh;
+background:#fff8ee;
+font-family:'Montserrat',sans-serif;
+display:flex;
+flex-direction:column;
+position:relative;
+overflow:hidden;
+margin:0;
 }
 
-.banner-marca {
-background-color: #7b0f12;
-color: #C29F66;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding: 32px;
-text-align: center;
-border-bottom: 4px solid #C29F66;
+.ornamento-superior{display:flex;justify-content:center;padding:18px 0;}
+.imagem-ornamento{width:90%;max-width:1100px;}
+
+.templo-esquerda{position:absolute;left:0;top:70px;width:320px;z-index:0;}
+.imagem-templo{width:100%;display:block;}
+
+.painel-vermelho{
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+width:100%;
+overflow:hidden;
+}
+.banner-athena{width:100%;display:block;}
+
+.logo-container{
+position:absolute;
+top:28px;
+left:50%;
+transform:translateX(-50%);
+width:90px;
+height:90px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+border:2px solid #C29F66;
+background:rgba(255,255,255,.08);
+color:#C29F66;
+font-weight:bold;
 }
 
-.logo-container {
-width: 80px;
-height: 80px;
-background-color: rgba(255, 255, 255, 0.1);
-border-radius: 50%;
-border: 1px solid #C29F66;
-display: flex;
-align-items: center;
-justify-content: center;
-margin-bottom: 16px;
-box-sizing: border-box;
+.titulo-marca{
+position:absolute;
+top:130px;
+left:50%;
+transform:translateX(-50%);
+font-family:'Cinzel',serif;
+color:#C29F66;
+letter-spacing:4px;
+margin:0;
 }
 
-.logo-texto {
-font-size: 10px;
-font-weight: bold;
+.subtitulo-marca{
+position:absolute;
+top:175px;
+left:50%;
+transform:translateX(-50%);
+width:75%;
+text-align:center;
+color:#fff;
+font-size:12px;
 }
 
-.logo-imagem {
-width: 100%;
-height: 100%;
-object-fit: contain;
+.area-formulario{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:40px 24px;
 }
 
-.titulo-marca {
-font-family: 'Cinzel', serif;
-font-size: 30px;
-font-weight: bold;
-letter-spacing: 4px;
-margin: 0;
+.cartao-formulario{
+width:100%;
+max-width:420px;
+background:#fdfbf7;
+padding:32px;
+border-radius:18px;
+border:2px solid rgba(194,159,102,.45);
+box-shadow:0 12px 30px rgba(0,0,0,.08);
 }
 
-.subtitulo-marca {
-color: #ffffff;
-font-size: 12px;
-margin-top: 8px;
-letter-spacing: 1px;
-opacity: 0.9;
+.icone-login{text-align:center;margin-bottom:15px;}
+.icone-login img{width:64px;}
+
+.titulo-formulario{
+font-family:'Cinzel',serif;
+color:#701115;
+text-align:center;
+margin:0;
 }
 
-.area-formulario {
-flex-grow: 1;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 24px;
-background-color: #fff8ee;
+.descricao-formulario{text-align:center;color:#6f6f6f;margin:10px 0 20px;}
+
+.linha-separadora{text-align:center;margin:20px 0;}
+.linha-separadora img{width:180px;}
+
+.formulario-operacional{display:flex;flex-direction:column;gap:16px;}
+.rotulo-campo{font-size:11px;font-weight:bold;color:#701115;margin-bottom:5px;}
+
+.campo-com-icone{
+display:flex;
+align-items:center;
+border:1px solid #C29F66;
+border-radius:12px;
+background:#fff;
+padding:0 12px;
+}
+.icone-campo{width:22px;margin-right:10px;}
+.campo-entrada{
+flex:1;
+border:none;
+padding:14px 6px;
+background:transparent;
+outline:none;
 }
 
-.cartao-formulario {
-width: 100%;
-max-width: 400px;
-background-color: #fdfbf7;
-padding: 32px;
-border-radius: 16px;
-border: 2px solid rgba(194, 159, 102, 0.5);
-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-box-sizing: border-box;
+.opcoes-login{
+display:flex;
+justify-content:space-between;
+font-size:12px;
+margin-top:6px;
 }
 
-.titulo-formulario {
-font-family: 'Cinzel', serif;
-font-size: 20px;
-font-weight: bold;
-color: #7b0f12;
-text-align: center;
-margin-top: 0;
-margin-bottom: 24px;
+.esqueceu-senha{color:#701115;text-decoration:none;}
+
+.botao-entrar,.botao-cadastro{
+border-radius:12px;
+font-family:'Cinzel',serif;
+font-weight:bold;
+cursor:pointer;
 }
 
-.formulario-operacional {
-display: flex;
-flex-direction: column;
-gap: 16px;
+.botao-entrar{
+background:#701115;
+color:#fff;
+border:1px solid #C29F66;
+padding:14px;
 }
 
-.grupo-campo {
-display: flex;
-flex-direction: column;
-gap: 4px;
+.primeiro-acesso{text-align:center;}
+.botao-cadastro{
+margin-top:12px;
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:12px 18px;
+background:#fff;
+color:#701115;
+border:1px solid #C29F66;
 }
+.icone-botao{width:20px;}
 
-.rotulo-campo {
-font-size: 10px;
-font-weight: bold;
-color: #7b0f12;
-letter-spacing: 1px;
+.rodape-decorativo{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:15px;
+padding:30px 0;
 }
+.ornamento-esquerdo,.ornamento-direito{flex:1;max-width:320px;}
+.prato-centro{width:70px;}
 
-.campo-entrada {
-width: 100%;
-background-color: #ffffff;
-border: 1px solid #C29F66;
-border-radius: 12px;
-padding: 12px 16px;
-font-size: 13px;
-color: #334155;
-box-sizing: border-box;
-transition: all 0.2s ease-in-out;
+@media(min-width:768px){
+.caixa-login{display:grid;grid-template-columns:40% 60%;}
+.painel-vermelho{height:100vh;}
+.banner-athena{height:100%;object-fit:cover;}
+.area-formulario{padding:60px;}
+.rodape-decorativo{
+position:absolute;
+left:50%;
+bottom:18px;
+transform:translateX(-50%);
+width:70%;
 }
-
-.campo-entrada::placeholder {
-color: rgba(194, 159, 102, 0.7);
-}
-
-.campo-entrada:focus {
-outline: none;
-border-color: #7b0f12;
-box-shadow: 0 0 0 2px rgba(123, 15, 18, 0.2);
-}
-
-.botao-entrar {
-width: 100%;
-background-color: #701115;
-color: #ffffff;
-font-family: 'Cinzel', serif;
-font-weight: bold;
-font-size: 14px;
-letter-spacing: 1px;
-padding: 14px;
-border: 1px solid #C29F66;
-border-radius: 12px;
-cursor: pointer;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-transition: all 0.2s ease-in-out;
-margin-top: 16px;
-}
-
-.botao-entrar:hover {
-background-color: #52090C;
-}
-
-.botao-entrar:active {
-transform: scale(0.98);
-}
-
-@media (min-width: 768px) {
-.caixa-login {
-flex-direction: row;
-}
-
-.banner-marca {
-    width: 40%;
-    padding: 48px;
-    border-bottom: 0;
-    border-right: 4px solid #C29F66;
-}
-
-.area-formulario {
-    padding: 48px;
-}
-
-
 }
