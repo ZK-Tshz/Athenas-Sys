@@ -25,6 +25,10 @@ public class Restaurante {
     private String senha;
 
     public Restaurante(DadosCadastroRestaurante dados) {
-
+        this.nome = dados.nome();
+        this.email = dados.email();
+        this.telefone = dados.telefone();
+        this.cnpj = dados.cnpj();
+        this.senha = dados.senha();
     }
 }

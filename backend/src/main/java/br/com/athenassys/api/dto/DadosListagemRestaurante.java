@@ -9,5 +9,12 @@ public record DadosListagemRestaurante(
         String cnpj,
         String senha
 ) {
-
+    public DadosListagemRestaurante(Restaurante restaurante) {
+        this(
+                restaurante.getNome(),
+                restaurante.getEmail(),
+                restaurante.getTelefone(),
+                restaurante.getCnpj(),
+                restaurante.getSenha());
+    }
 }

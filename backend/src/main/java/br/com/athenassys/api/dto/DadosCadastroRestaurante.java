@@ -18,7 +18,7 @@ public record DadosCadastroRestaurante(
         String telefone,
 
         @NotBlank
-        @Pattern(regexp = "\\d{2}\\.\\d{3}\\.\\d{3}/\\d{4}-\\d{2}") //XX.XXX.XXX/XXXX-XX
+        //@Pattern(regexp = "\\d{2}\\.\\d{3}\\.\\d{3}/\\d{4}-\\d{2}") //XX.XXX.XXX/XXXX-XX
         String cnpj,
 
         @NotBlank
